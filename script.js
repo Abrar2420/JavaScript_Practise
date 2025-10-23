@@ -53,3 +53,89 @@ let data6 = Symbol("id"); // symbol, a special value thats always unique, i.e. e
 console.log(data6);
 let data7 = 123456789012345678901234567890n; // BigInt, use when assign very big numver, and its denoten by n and the end of the number
 console.log(data7);
+
+// JavaScript Operators
+
+// Arithmatic Operators
+
+let operation1 = 5 + 5; // addition, adds two value
+console.log(operation1);
+let operation2 = 15 - 10; // subtraction, subtracts two value
+console.log(operation2);
+let operation3 = 15 * 10; // multiplication, multiplys two value
+console.log(operation3);
+let operation4 = 15 / 10; // division, divides two value
+console.log(operation4);
+let operation5 = 15 ** 10; // exponent, to denote the exponent of a value, here: 15^10.
+console.log(operation5);
+let operation6 = 15 % 10; // Modulus, remainder of after the division of two values.
+console.log(operation6);
+let operation7 = 5; // increment, increases the value by 1 of the incremented variable.
+operation7++;
+console.log(operation7);
+let operation8 = 5; // decrement, decreases the value by 1 of the decremented variable.
+operation8--;
+console.log(operation8);
+
+// Order of operations in JavaScript
+
+// () > ** > unary operators > (*,/,% "left to right") > (+,- "LTR") > (<, <=, >, >= "LTR") > (==, !=, ===, !== "LTR") > && > || > =
+
+// Assignment Operators
+let y;
+let x = 5;
+y = x; // =, assigns a values to a variable
+console.log(y);
+y += x; // short hand for y = y + x;
+console.log(y);
+y -= x; // short hand for y = y - x;
+console.log(y);
+y *= x; // short hand for y = y * x;
+console.log(y);
+y **= x; // short hand for y = y ** x;
+console.log(y);
+y /= x; // short hand for y = y / x;
+console.log(y);
+y %= x; // short hand for y = y % x;
+console.log(y);
+
+// Logical Operators
+
+let a = true;
+let b = false;
+
+console.log(a && b); // &&, if all the arguments given to the && are true it returns true, any argument is flase it returns false
+
+let c = true;
+let d = false;
+
+console.log(a || b); // ||, if all the arguments given to the || operator are true it returns true, if one of the operator is true it returns true
+
+let e = true;
+
+console.log(!e); // logical not, here it will return false
+
+//Comparision Operators
+//compares value and returns true or false
+let com1 = 6;
+let com2 = 7;
+let com3 = 6;
+let com4 = "6";
+console.log(com1 == com2); // return true if the compared values are same
+console.log(com1 == com3); // return true if the compared values are same
+console.log(com1 === com3); // return true if the compared values are same and are of the same datatype
+console.log(com1 === com4); // return true if the compared values are same and are of the same datatype
+console.log(com1 != com2); // return true if the compared values are true for ==. and vise versa
+console.log(com1 !== com4); // return true if the compared values are true for ===. and vise versa
+console.log(com1 > com2); // returns true if the compared valuer match the comparision
+console.log(com1 < com2); // return true if the compared values match the comparision
+console.log(com1 >= com3); // return true if the compared values match the comparision
+console.log(com1 <= com2); // return true if the compared values match the comparision
+
+// Ternary Operator
+
+// condition ? valueIfTrue : valueIfFalse
+
+let age = 18;
+let canVote = age >= 18 ? "Yes, can vote" : "No, too young";
+console.log(canVote); // "Yes, can vote"
