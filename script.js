@@ -49,3 +49,7 @@ let data4 = null; // null, no value, keeping it intentionally empty.
 console.log(data4);
 let data5; // undifined, when no value has been set for a variable it stays undifined.
 console.log(data5);
+let data6 = Symbol("id"); // symbol, a special value thats always unique, i.e. even if the same value is given to two symbol, they would still be different and unigue
+console.log(data6);
+let data7 = 123456789012345678901234567890n; // BigInt, use when assign very big numver, and its denoten by n and the end of the number
+console.log(data7);
