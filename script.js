@@ -37,48 +37,78 @@
 
 // age verifier
 
-let age = +prompt("Enter you age:");
+// let age = +prompt("Enter you age:");
 
-if (age >= 18) {
-  alert("You can drive"); // runs if the condition is true
-} else {
-  alert("You can't drive"); // rens if none of the if conditions are true
+// if (age >= 18) {
+//   alert("You can drive"); // runs if the condition is true
+// } else {
+//   alert("You can't drive"); // rens if none of the if conditions are true
+// }
+
+// // // simple calculator
+
+// let operator = prompt("Enter an operator (+, -, * or, /):");
+// let num1 = +prompt("Enter the first number:");
+// let num2 = +prompt("Enter the second number:");
+
+// if (operator == "+") {
+//   alert(`The answer is: ${num1 + num2}`);
+// } else if (operator == "-") {
+//   alert(`The answer is: ${num1 - num2}`);
+// } else if (operator == "*") {
+//   alert(`The answer is: ${num1 * num2}`);
+// } else if (operator == "/") {
+//   alert(`The answer is: ${num1 / num2}`);
+// } else {
+//   alert(`Invalid input`);
+// }
+
+// // for loop
+
+// // multiplication table
+
+// let num = 5;
+// // i = 0 works as a loop counter; condition; increment/decrement;
+// for (i = 1; i <= 10; i++) {
+//   console.log(`${num} x ${i} = ${num * i}`); // runs everytime the loop runs
+// }
+
+// // calculates the sum of number
+
+// let sumN = 5;
+// let add = 0;
+
+// for (i = 1; i <= sumN; i++) {
+//   add = add + i;
+//   console.log(add);
+// }
+
+// while loop
+
+// print even numbers
+
+// let evenN = 20;
+// let i = 2;
+// while (i <= evenN) { // takes the condition for the loop to run when the condition becomes false loop stops
+//   console.log(i); // these statements run every time the loop runs
+//   i = i + 2;
+// }
+
+// guess the number
+
+let randomNumber = 5;
+let guess = +prompt("Enter you number:");
+while (randomNumber != guess) {
+  if (guess > randomNumber) {
+    alert("guess a smaller number");
+    guess = +prompt("Enter your number:");
+  } else if (guess < randomNumber) {
+    alert("guess a biggier number");
+    guess = +prompt("Enter your number:");
+  } else {
+    alert("invalid input");
+    guess = +prompt("Enter your number:");
+  }
 }
 
-// // simple calculator
-
-let operator = prompt("Enter an operator (+, -, * or, /):");
-let num1 = +prompt("Enter the first number:");
-let num2 = +prompt("Enter the second number:");
-
-if (operator == "+") {
-  alert(`The answer is: ${num1 + num2}`);
-} else if (operator == "-") {
-  alert(`The answer is: ${num1 - num2}`);
-} else if (operator == "*") {
-  alert(`The answer is: ${num1 * num2}`);
-} else if (operator == "/") {
-  alert(`The answer is: ${num1 / num2}`);
-} else {
-  alert(`Invalid input`);
-}
-
-// for loop
-
-// multiplication table
-
-let num = 5;
-// i = 0 works as a loop counter; condition; increment/decrement;
-for (i = 1; i <= 10; i++) {
-  console.log(`${num} x ${i} = ${num * i}`); // runs everytime the loop runs
-}
-
-// calculates the sum of number
-
-let sumN = 5;
-let add = 0;
-
-for (i = 1; i <= sumN; i++) {
-  add = add + i;
-  console.log(add);
-}
+alert("you got the correct number");
