@@ -64,3 +64,21 @@ if (operator == "+") {
 }
 
 // for loop
+
+// multiplication table
+
+let num = 5;
+// i = 0 works as a loop counter; condition; increment/decrement;
+for (i = 1; i <= 10; i++) {
+  console.log(`${num} x ${i} = ${num * i}`); // runs everytime the loop runs
+}
+
+// calculates the sum of number
+
+let sumN = 5;
+let add = 0;
+
+for (i = 1; i <= sumN; i++) {
+  add = add + i;
+  console.log(add);
+}
