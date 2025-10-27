@@ -32,3 +32,35 @@
 //       }TK`
 //     )
 //   : alert(`You are not eligible for any discount`);
+
+// if else statement
+
+// age verifier
+
+let age = +prompt("Enter you age:");
+
+if (age >= 18) {
+  alert("You can drive"); // runs if the condition is true
+} else {
+  alert("You can't drive"); // rens if none of the if conditions are true
+}
+
+// // simple calculator
+
+let operator = prompt("Enter an operator (+, -, * or, /):");
+let num1 = +prompt("Enter the first number:");
+let num2 = +prompt("Enter the second number:");
+
+if (operator == "+") {
+  alert(`The answer is: ${num1 + num2}`);
+} else if (operator == "-") {
+  alert(`The answer is: ${num1 - num2}`);
+} else if (operator == "*") {
+  alert(`The answer is: ${num1 * num2}`);
+} else if (operator == "/") {
+  alert(`The answer is: ${num1 / num2}`);
+} else {
+  alert(`Invalid input`);
+}
+
+// for loop
