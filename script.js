@@ -96,19 +96,64 @@
 
 // guess the number
 
-let randomNumber = 5;
-let guess = +prompt("Enter you number:");
-while (randomNumber != guess) {
-  if (guess > randomNumber) {
-    alert("guess a smaller number");
-    guess = +prompt("Enter your number:");
-  } else if (guess < randomNumber) {
-    alert("guess a biggier number");
-    guess = +prompt("Enter your number:");
-  } else {
-    alert("invalid input");
-    guess = +prompt("Enter your number:");
-  }
+// let randomNumber = 5;
+// let guess = +prompt("Enter you number:");
+// while (randomNumber != guess) {
+//   if (guess > randomNumber) {
+//     alert("guess a smaller number");
+//     guess = +prompt("Enter your number:");
+//   } else if (guess < randomNumber) {
+//     alert("guess a biggier number");
+//     guess = +prompt("Enter your number:");
+//   } else {
+//     alert("invalid input");
+//     guess = +prompt("Enter your number:");
+//   }
+// }
+
+// alert("you got the correct number");
+
+// switch case
+
+// trafic color describer
+
+let color = prompt("Enter a trafic color:");
+
+switch (
+  color //takes a single expression, doesn't take conditons
+) {
+  case "red": // if the case matches the experssion the code runs for that case
+    alert("Vehicles must stop completely.");
+    break; // all casses will run if break; is not given
+  case "yellow":
+    alert("It means the light is about to change — prepare to stop.");
+    break;
+  case "green":
+    alert("You may go if the road is clear.");
+    break;
+  default: // works kind of like else
+    alert("not a valid traffic color");
 }
 
-alert("you got the correct number");
+// simple calculator using switch
+
+let num1 = +prompt("Enter the first number:");
+let operator = prompt("Enter an operator (+, -, * or, /):");
+let num2 = +prompt("Enter the second number:");
+
+switch (operator) {
+  case "+":
+    alert(`The answer is: ${num1 + num2}`);
+    break;
+  case "-":
+    alert(`The answer is: ${num1 - num2}`);
+    break;
+  case "*":
+    alert(`The answer is: ${num1 * num2}`);
+    break;
+  case "/":
+    alert(`The answer is: ${num1 + num2}`);
+    break;
+  default:
+    alert(`Invalid input`);
+}
