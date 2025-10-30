@@ -39,7 +39,7 @@ function showBill(price, quantity, vatPercentage, discountPercentage) {
               ---------------- Customer Invoice ----------------
                     total quantity  : ${quantity}
                     item pirce      : ${price}
-                    -----------------------------------  
+                    -----------------------------------
                     total price     : ${total} TK
                     vat added       : 15 %
                     -----------------------------------
@@ -54,3 +54,37 @@ function showBill(price, quantity, vatPercentage, discountPercentage) {
 
 showBill(priceInput, quantityInput, 15, 20); // runs the function with the parameter provided
 // this function calls other functions to fetch their returned value.
+
+anonymous function practice
+Invoice printing using a single function
+
+let priceInput = +prompt("Enter the Price:");
+let quantityInput = +prompt("Enter the Quantity:");
+
+// this function takes 4 parameters for calculating the subTotal
+let showBill = function (price, quantity, vatPercentage, discountPercentage) {
+  let totalPrice = price * quantity; // total price of for the privided quantity
+  let calcVat = (totalPrice / 100) * vatPercentage; // calculates the vat amount
+  let addVat = calcVat + totalPrice; // total after adding vat
+  let calcDiscount = (addVat / 100) * discountPercentage; //calculates the discount amount
+  let addDiscount = addVat - calcDiscount; // total after subtracting discount amount
+
+  console.log(`
+              ---------------- Customer Invoice ----------------
+                    total quantity  : ${quantity}
+                    item pirce      : ${price}
+                    -----------------------------------
+                    total price     : ${totalPrice} TK
+                    vat added       : ${vatPercentage} %
+                    -----------------------------------
+                    total after vat : ${addVat} TK
+                    discount given  : ${discountPercentage} %
+                    -----------------------------------
+                    sub total       : ${addDiscount} TK
+
+                    ** Thank you for shoping with us **
+    `);
+};
+
+//calls the function stored in the showBill variable
+console.log(showBill(priceInput, quantityInput, 15, 20));
