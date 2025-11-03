@@ -106,3 +106,33 @@ const found4 = array.findLastIndex((element) => element > 10); // will check whi
 
 console.log(found4);
 // Expected output: [4], as it is first when checking form the end which satisfies the condition although [3], & [1] are also > 10
+
+// JS sort methods
+
+fruits.sort(); // sorts alphabetically
+console.log(fruits);
+
+fruits.reverse(); // reverses the element in an array
+console.log(fruits);
+
+let beastsSort = beasts.toSorted(); // works like .sort() but creates a new array, keeping the original.
+console.log(beastsSort); // new modified array
+console.log(beasts); // original stays the same
+
+let beastsReversed = beasts.toReversed(); // works like .reversed() but creates a new array, keeping the original.
+console.log(beastsReversed); // new modified array
+console.log(beasts); // original stays the same
+
+// Numaric sort
+
+array.sort((a, b) => {
+  // takes a functtion which accepts 2 paratemers
+  return a - b; // this tells .sort() to sort in the asscending order
+}); // sorts alphabetically
+console.log(array);
+
+array.sort((a, b) => {
+  // takes a functtion which accepts 2 paratemers
+  return b - a; // this tells .sort() to sort in the descending order
+}); // sorts alphabetically
+console.log(array);
