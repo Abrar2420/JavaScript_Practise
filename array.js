@@ -1,4 +1,4 @@
-// JS array methods
+// // JS array methods
 
 let fruits = ["Banana", "Orange", "Apple", "Mango"];
 // .legth --> returns the length of a array, counts form 1
@@ -75,3 +75,34 @@ console.log(fruits); // original is unchanged
 fruits.push("pineapple", "cherry", "jackfruit");
 let newSlice = fruits.slice(1, -2); // slices form including index 1 till -2 form the end
 console.log(newSlice);
+
+// JS array seardh methods
+
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison")); // returns 1 as the first "bison" is there
+console.log(beasts.indexOf("bison", 2)); // starts looking after index 2 returns 4 as the first "bison" after 2 is there
+
+console.log(fruits.includes("Mango")); // returns boolean
+
+const array = [5, 12, 8, 130, 44];
+
+const found = array.find((element) => element > 10); // will check which is the first value that satisfies the conditon
+
+console.log(found);
+// Expected output: 12, as it is first which satisfies the condition although 130, & 44 are also > 10
+
+const found2 = array.findIndex((element) => element > 10); // will check which is the first value that satisfies the conditon and it will return its index
+
+console.log(found2);
+// Expected output: [1], as it is first which satisfies the condition although [3], & [4] are also > 10
+
+const found3 = array.findLast((element) => element > 10); // will check which is the first value from the end that satisfies the conditon
+
+console.log(found3);
+// Expected output: 44, as it is first when checking form the end which satisfies the condition although 130, & 12 are also > 10
+
+const found4 = array.findLastIndex((element) => element > 10); // will check which is the first value from the end that satisfies the conditon and it will return its index
+
+console.log(found4);
+// Expected output: [4], as it is first when checking form the end which satisfies the condition although [3], & [1] are also > 10
