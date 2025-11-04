@@ -136,3 +136,77 @@ array.sort((a, b) => {
   return b - a; // this tells .sort() to sort in the descending order
 }); // sorts alphabetically
 console.log(array);
+
+// JS array iterations
+
+fruits.forEach((element, index, arr) => {
+  // this function will run for each element once
+  // the 1st parameter contains the currnet element bieng processed in the array
+  // the 2nd parameter contains the index of the current element bieng processed in the array
+  // the 3nd parameter contains The array forEach() was called upon
+  console.log(element, index, arr);
+});
+
+// this example shows a use case of forEach(), in place of for loop
+const items = ["item1", "item2", "item3"];
+const copyItems = [];
+
+// before
+for (let i = 0; i < items.length; i++) {
+  copyItems.push(items[i]);
+  console.log(copyItems);
+}
+
+// after
+items.forEach((item) => {
+  // item parameter contains currnet element bieng processed in the array, which is then pushed in the new array
+  copyItems.push(item);
+  console.log(copyItems);
+});
+
+// map() works like forEach() except returns a new array
+let mapFruits = fruits.map((value) => {
+  return value + " is a healthy fruit"; // value contains currnet element bieng processed in the array, which is then added with the string provided
+});
+console.log(mapFruits); // modified and returned into a new array
+console.log(fruits); // unchanged
+
+// flatMap() works like map()  and flat() for 1 indented array line
+let flatMapArray = array.flatMap((value) => {
+  return [value, value * 2]; // returns an array of value (current element), value * 2 (current element * 2)
+  // now flatMapArray contains some array which is then concatinated using the flat proprety of flatMap
+});
+console.log(flatMapArray); // modified and returned into a new array
+
+let arr = [2, 46, 5, 39, 109, 204, 75, 66, 101, 22, 80];
+
+let filterArr = arr.filter((value) => {
+  return value % 2 === 0; // returns only the value which met the condition provided
+});
+
+console.log(filterArr);
+
+let sum = arr.reduce((total, value) => {
+  // the cycle will go like total + value (the returned value(in this case 0) + value)
+  // runs again total + value (returned value (now (0 + vlaue)) + value)
+  // runs for every element
+  return total + value;
+});
+console.log(sum);
+
+let everyArr = arr.every((value) => {
+  // check if every element is > 20, returns boolean
+  return value > 20;
+});
+console.log(everyArr);
+let someArr = arr.some((value) => {
+  // check if some element is > 20, returns boolean
+  return value > 20;
+});
+console.log(someArr);
+
+let string = "ABRAR";
+console.log(Array.from(string)); // makes an array of the provided value
+
+let withArr = arr.with(2, 999); // change the value at index 2 to 999
+console.log(withArr);
