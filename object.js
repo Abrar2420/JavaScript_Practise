@@ -52,6 +52,29 @@ const user = {
         city: "Dhaka",
         Country: "Bangladesh",
       },
+      planateryAddress: {
+        observableUniverse: {
+          cosmicWeb: {
+            galaxy: {
+              name: "Mlky Way",
+              positioned: "Laniakea Supercluster",
+              solarSystem: {
+                star: "Sun",
+                residingPlanet: "earth",
+                otherPlanets: [
+                  "Mercury",
+                  "Venus",
+                  "Mars",
+                  "Jupiter",
+                  "Saturn",
+                  "Uranus",
+                  "Neptune",
+                ],
+              },
+            },
+          },
+        },
+      },
     },
     contact: {
       phone: {
@@ -96,4 +119,4 @@ const user = {
   },
 };
 
-console.log(user.profile.name.fullName());
+// console.log(user.profile.address.permanent.permanentArr());
