@@ -2,4 +2,6 @@ a {
   background-color: #25292e;
   height: 60px;
   color: #c8c9ca;
+  align-items: center;
+  width: 30px;
 }
