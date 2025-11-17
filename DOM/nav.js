@@ -14,6 +14,25 @@ import {
   navMenuListStyle,
   navMenuListItemAttr,
   navMenuListItemStyle,
+  navRightAttr,
+  navRightStyle,
+  navSearchAttr,
+  navSearchStyle,
+  navSigninAttr,
+  navSigninStyle,
+  navSignupAttr,
+  navSignupStyle,
+  navIconAttr,
+  navIconStyle,
+  mainStyle,
+  mainBoxAttr,
+  mainBoxStyle,
+  passwordHeadingAttr,
+  passwordHeadingStyle,
+  passwordInputAttr,
+  passwordInputStyle,
+  passwordBtnAttr,
+  passwordBtnStyle,
 } from "./styles.js";
 // creating github navbar JS
 
@@ -53,3 +72,74 @@ for (let i = 0; i < menuText.length; i++) {
   );
   navMenuListItem.textContent = menuText[i];
 }
+let navRight = createElement("div", container, navRightAttr, navRightStyle);
+let navSearch = createElement("input", navRight, navSearchAttr, navSearchStyle);
+let navSignin = createElement(
+  "button",
+  navRight,
+  navSigninAttr,
+  navSigninStyle
+);
+let navSignup = createElement(
+  "button",
+  navRight,
+  navSignupAttr,
+  navSignupStyle
+);
+navSignin.textContent = "Sign in";
+navSignup.textContent = "Sign up";
+let navIcon = createElement("img", navRight, navIconAttr, navIconStyle);
+let main = createElement("main", root, {}, mainStyle);
+let mainContainer = createElement("div", main, containerAttr, containerStyle);
+let mainBox = createElement("div", mainContainer, mainBoxAttr, mainBoxStyle);
+let passwordHeading = createElement(
+  "h1",
+  mainBox,
+  passwordHeadingAttr,
+  passwordHeadingStyle
+);
+passwordHeading.textContent = "Generate password";
+let passwordInput = createElement(
+  "input",
+  mainBox,
+  passwordInputAttr,
+  passwordInputStyle
+);
+let passwordBtn = createElement(
+  "div",
+  mainBox,
+  passwordBtnAttr,
+  passwordBtnStyle
+);
+passwordBtn.textContent = "Generate Password";
+
+//& ==================== password generator ======================
+
+const passwordBox = document.querySelector(".passwordInput");
+console.log(passwordBox);
+const passwordLength = 16;
+const passBtn = document.querySelector(".passwordBtn");
+
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+const number = "0123456789";
+const symbol = "!@#$%^&*()_+-=[]{}|;:',.<>?/`";
+const allChar = upperCase + lowerCase + number + symbol;
+
+const createPassword = () => {
+  let password = "";
+  password += upperCase[Math.floor(Math.random() * upperCase.length)];
+  password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+  password += number[Math.floor(Math.random() * number.length)];
+  password += symbol[Math.floor(Math.random() * symbol.length)];
+
+  while (passwordLength > password.length) {
+    password += allChar[Math.floor(Math.random() * allChar.length)];
+  }
+  return password;
+};
+
+passBtn.addEventListener("click", () => {
+  // console.log("clicked");
+  passwordBox.value = createPassword();
+});
