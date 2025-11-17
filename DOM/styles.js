@@ -1,4 +1,5 @@
-// making style as objects
+//& styles as in objects which are then given
+//&  as function parameter for createELement
 export const navStyle = {
   "background-color": "#25292e",
   height: "80px",
@@ -115,6 +116,8 @@ export const passwordHeadingStyle = {
   color: "#50C878",
   "font-size": "36px",
   "letter-spacing": "1.5px",
+  margin: "0px 0px 25px 0px",
+  "text-shadow": "0 0 32px #50C878, 0 0 8px rgba(80, 200, 120, 0.6)",
 };
 export const passwordInputStyle = {
   "font-family": "'Mona Sans', sans-serif",
@@ -142,7 +145,8 @@ export const passwordBtnStyle = {
   cursor: "pointer",
 };
 
-// *making attributes as objects
+//& attributes as in objects which are then
+//& given as function parameter for createELement
 
 export const navAttr = {
   class: "nav",

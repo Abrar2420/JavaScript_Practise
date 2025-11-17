@@ -34,8 +34,10 @@ import {
   passwordBtnAttr,
   passwordBtnStyle,
 } from "./styles.js";
-// creating github navbar JS
 
+//& ============== github navbar JS ===================
+
+// selecting the root div element to append all its child element
 const root = document.querySelector(".root");
 
 //* the createELement function will create an element,
@@ -47,6 +49,8 @@ const root = document.querySelector(".root");
 //*  --> 3. the attributes (takes an object) we want to set for the element
 //*  --> 4. the styles (takes an object) we want to set for the element
 //* and then it returns the new element
+
+//& creating elements in the document
 let nav = createElement("nav", root, navAttr, navStyle);
 let container = createElement("div", nav, containerAttr, containerStyle);
 let navLeft = createElement("div", container, navLeftAttr, navLeftStyle);
@@ -63,6 +67,8 @@ let menuText = [
   "Pricing",
 ];
 for (let i = 0; i < menuText.length; i++) {
+  // creating 6 li>a using for loop and array consinting of all the <a> text.
+  // by adding an item in the menuText, will result in another munuItem (li>a)
   navMenuList = createElement("li", navMenu, navMenuListAttr, navMenuListStyle);
   navMenuListItem = createElement(
     "a",
@@ -86,9 +92,16 @@ let navSignup = createElement(
   navSignupAttr,
   navSignupStyle
 );
+
+// using .textContent to add the text for the created elements
 navSignin.textContent = "Sign in";
 navSignup.textContent = "Sign up";
 let navIcon = createElement("img", navRight, navIconAttr, navIconStyle);
+
+//& ============== github navbar JS ===================
+
+//& ============== Password generator elements ===================
+
 let main = createElement("main", root, {}, mainStyle);
 let mainContainer = createElement("div", main, containerAttr, containerStyle);
 let mainBox = createElement("div", mainContainer, mainBoxAttr, mainBoxStyle);
@@ -112,27 +125,32 @@ let passwordBtn = createElement(
   passwordBtnStyle
 );
 passwordBtn.textContent = "Generate Password";
+//& ============== Password generator elements ===================
 
-//& ==================== password generator ======================
+//& ==================== password generator logic ======================
 
-const passwordBox = document.querySelector(".passwordInput");
+const passwordBox = document.querySelector(".passwordInput"); // input tag
 console.log(passwordBox);
-const passwordLength = 16;
-const passBtn = document.querySelector(".passwordBtn");
+const passwordLength = 16; // length of passowrd
+const passBtn = document.querySelector(".passwordBtn"); // button tag
 
+// variables containing all the characters
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const number = "0123456789";
 const symbol = "!@#$%^&*()_+-=[]{}|;:',.<>?/`";
+// all characters stored in a single variable
 const allChar = upperCase + lowerCase + number + symbol;
 
 const createPassword = () => {
+  //* password which is an empty string is updated with a random value form all 4 of the variable containing characters, makeing the length of the password to 4.
   let password = "";
   password += upperCase[Math.floor(Math.random() * upperCase.length)];
   password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
   password += number[Math.floor(Math.random() * number.length)];
   password += symbol[Math.floor(Math.random() * symbol.length)];
 
+  //* this loops the code to add a random character to password until it reaches passwordLength which is 16, hence now password legth is 16 consisting of all characters
   while (passwordLength > password.length) {
     password += allChar[Math.floor(Math.random() * allChar.length)];
   }
@@ -140,6 +158,8 @@ const createPassword = () => {
 };
 
 passBtn.addEventListener("click", () => {
-  // console.log("clicked");
+  // adding the value of password ( form the createPassword() function) to passwordBox which is the input tag
   passwordBox.value = createPassword();
 });
+
+//& ==================== password generator logic ======================
