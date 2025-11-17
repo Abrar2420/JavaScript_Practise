@@ -105,7 +105,7 @@ export const mainBoxStyle = {
   "flex-direction": "column",
   margin: "auto",
   border: "4px solid #50C878",
-  padding: "65px 35px",
+  padding: "75px 45px",
   "border-radius": "48px",
   //   "background-color": "#212121",
   "background-image": `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%2350c878' fill-opacity='0.3'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E")`,
