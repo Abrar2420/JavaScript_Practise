@@ -100,7 +100,7 @@ let navIcon = createElement("img", navRight, navIconAttr, navIconStyle);
 
 //& ============== github navbar JS ===================
 
-//& ============== Password generator elements ===================
+//& ============ Password generator elements =================
 
 let main = createElement("main", root, {}, mainStyle);
 let mainContainer = createElement("div", main, containerAttr, containerStyle);
@@ -125,9 +125,9 @@ let passwordBtn = createElement(
   passwordBtnStyle
 );
 passwordBtn.textContent = "Generate Password";
-//& ============== Password generator elements ===================
+//& ============== Password generator elements =================
 
-//& ==================== password generator logic ======================
+//& ================= password generator logic =================
 
 const passwordBox = document.querySelector(".passwordInput"); // input tag
 console.log(passwordBox);
@@ -162,4 +162,4 @@ passBtn.addEventListener("click", () => {
   passwordBox.value = createPassword();
 });
 
-//& ==================== password generator logic ======================
+//& ================= password generator logic =================
