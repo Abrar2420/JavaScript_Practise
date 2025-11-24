@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Center the card vertically + horizontally */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f7f9fc 0%, #e9f0fb 100%);
+  font-family: "Inter", sans-serif;
+}
+
+/* Card styling */
+.form-card {
+  width: 100%;
+  max-width: 520px;
+  border: none;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(38, 62, 112, 0.08),
+    0 2px 6px rgba(20, 30, 60, 0.04);
+  background: #ffffff;
+}
+
+/* Slightly larger input */
+.form-control {
+  padding: 0.9rem 0.75rem !important;
+  border-radius: 8px !important;
+}
+
+/* subtle label color */
+label.form-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.form-help {
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 6px 18px rgba(80, 128, 255, 0.12);
+}
+
+.input-group .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-radius: 8px;
+}
+
+.input-group input {
+  padding: 15px 13px;
+}
+
+.invalid-feedback {
+  font-size: 0.85rem;
+}
