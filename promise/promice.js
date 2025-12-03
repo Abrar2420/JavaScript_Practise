@@ -43,10 +43,80 @@ new Promise((resolve, reject) => {
 
 const promiseThree = new Promise((resolve, reject) => {
   setTimeout(() => {
+    // calling resolve means the promise is succesfull the js will go to any .then in the file, and any value inside the resolve can be passed on to that then
     resolve({ username: "Tom", email: "tom@example.com" });
   }, 1000);
 });
 
 promiseThree.then((user) => {
+  // parameter here cantains the value form the resolve from the promise
   console.log(user);
 });
+
+const promiseFour = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let error = false;
+    if (!error) {
+      resolve({ usermane: "Ben", password: "123" });
+    } else {
+      // reject will to caought at .catch
+      reject("ERROR: Result not found");
+    }
+  }, 1000);
+});
+
+promiseFour
+  .then((user) => {
+    console.log(user);
+    return user.usermane;
+    // this will return a promise which can the be passed inside another .then and obtaine the returned value in their parameter
+  })
+  .then((username) => {
+    console.log(username);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    // runs either way if the promise is resolved of rejected
+    console.log("This runs anyways");
+  });
+
+// const promiseFive = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let error = true;
+//     if (!error) {
+//       resolve({ usermane: "Sam", password: "123" });
+//     } else {
+//       // reject will to caought at .catch
+//       reject("ERROR: Result not found");
+//     }
+//   }, 1000);
+// });
+
+// fetch returns a promise which is accesable by
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((api) => {
+    console.log(api);
+    return api.json();
+  })
+  .then((apiData) => {
+    console.log(apiData);
+    console.log(typeof apiData);
+    apiData.map;
+    let allUsername = [];
+    apiData.map((user) => {
+      allUsername.push(user.username);
+    });
+
+    return allUsername;
+  })
+  .then((allUsername) => {
+    console.log(allUsername);
+  })
+  .catch((err) => {
+    console.log(err, "Error: something went wrong");
+  })
+  .finally(() => {
+    console.log("done");
+  });
