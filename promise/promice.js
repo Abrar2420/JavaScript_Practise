@@ -94,29 +94,53 @@ promiseFour
 //   }, 1000);
 // });
 
-// fetch returns a promise which is accesable by
-fetch("https://jsonplaceholder.typicode.com/users")
+// fetch returns a promise which is accesable by .then
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((api) => {
+//     console.log(api);
+//     return api.json();
+//   })
+//   .then((apiData) => {
+//     console.log(apiData);
+//     console.log(typeof apiData);
+//     let allUsername = [];
+//     apiData.map((user) => {
+//       allUsername.push(user.username);
+//     });
+
+//     return allUsername;
+//   })
+//   .then((allUsername) => {
+//     console.log(allUsername);
+//   })
+//   .catch((err) => {
+//     console.log(err, "Error: something went wrong");
+//   })
+//   .finally(() => {
+//     console.log("done");
+//   });
+
+fetch("https://dummyjson.com/products")
   .then((api) => {
     console.log(api);
     return api.json();
   })
   .then((apiData) => {
     console.log(apiData);
-    console.log(typeof apiData);
-    apiData.map;
-    let allUsername = [];
-    apiData.map((user) => {
-      allUsername.push(user.username);
-    });
 
-    return allUsername;
+    return apiData.products;
   })
-  .then((allUsername) => {
-    console.log(allUsername);
-  })
-  .catch((err) => {
-    console.log(err, "Error: something went wrong");
-  })
-  .finally(() => {
-    console.log("done");
+  .then((dataProducts) => {
+    console.log(dataProducts);
+    let allTitle = [];
+    dataProducts.map((_, index) => {
+      allTitle.push(dataProducts[index].title);
+    });
+    console.log(allTitle);
+  });
+
+fetch("https://dummyjson.com/image/150")
+  .then((response) => response.blob()) // Convert response to blob
+  .then((blob) => {
+    console.log("Fetched image blob:", blob);
   });
