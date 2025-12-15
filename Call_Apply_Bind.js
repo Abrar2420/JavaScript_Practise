@@ -38,7 +38,10 @@ console.log(person.fullName.apply(person1, applyArguments1));
 console.log(person.fullName.apply(person2, applyArguments2));
 console.log(person.fullName.apply(person3, applyArguments3));
 
-// Math.max don't work on arrays is JS, .apply can be used as it takes an array as argument, and Math.max is a method, and all methods are functions and we can use apply to it.
+// Math.max don't work on arrays is JS,
+// .apply can be used as it takes an array as argument,
+// and Math.max is a method,
+// and all methods are functions and we can use apply to it.
 console.log(Math.max(1, 2, 3)); // output 3
 
 console.log(Math.max([1, 2, 3])); // output NaN because we are passing an array
