@@ -83,3 +83,31 @@ const callPromise = async () => {
 };
 
 callPromise();
+
+// const fucn1 = () => {
+//   setTimeout(() => {
+//     console.log("this should run first");
+//   }, 600);
+// };
+// const fucn2 = () => {
+//   setTimeout(() => {
+//     console.log("this should run second");
+//   }, 900);
+// };
+// const fucn3 = () => {
+//   setTimeout(() => {
+//     console.log("this should run third");
+//   }, 500);
+// };
+
+// fucn1();
+// fucn2();
+// fucn3();
+
+// const allFunc = async () => {
+//   await fucn1();
+//   await fucn2();
+//   await fucn3();
+// };
+
+// allFunc();
