@@ -1,5 +1,6 @@
 //~ JS Call method
-// call() can be used to invoke a function with an object as its parameter
+// call() can be used to invoke 
+// a function with an object as its parameter
 
 const person = {
   fullName: function (a, b, c, d, e) {

@@ -151,7 +151,9 @@ const year = day * 365;
 console.log(date / year); // returns no, of year passed since 1970
 
 // JS Date set methods
-// they are used to set Date i.e. date.setMonth(11), works like similar to getDate(), but instead set the specified value of the to an existing newDate;
+// they are used to set Date i.e. date.setMonth(11), 
+// works like similar to getDate(), 
+// but instead set the specified value of the to an existing newDate;
 
 // copied form W3schools
 //~ ===  Name =========== Description ====================

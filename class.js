@@ -60,6 +60,37 @@ class ShoppingList {
 const myGrocery = new ShoppingList(["milk", "apple", "eggs", "bread"]);
 console.log(myGrocery.formatList());
 
+//& using getter and setter
+
+class Account {
+  #balance; // private property
+
+  constructor(privateBalance) {
+    this.#balance = privateBalance;
+  }
+
+  // getter, this will read the private property
+  get getBalance() {
+    return this.#balance;
+  }
+
+  // setter, this will update the private property
+  set setBalance(amount) {
+    if (amount < 0) {
+      console.log("balance cannot be negative");
+    }
+    return (this.#balance = amount);
+  }
+}
+
+const account = new Account(500);
+
+console.log(account.getBalance); // output 500, can read because we get getBalance to #balance
+
+account.setBalance = 1500; // this will set the balance to 1500, by updating it.
+console.log(account.getBalance); // if we get the balance now it will out put 1500 instead
+account.setBalance = -555; // this will print the log in the if block of setBalance
+
 /*
   ===========================================================
   JS CLASS CHEAT SHEET

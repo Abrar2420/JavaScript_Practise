@@ -4,7 +4,9 @@ const target = { a: 1, b: 2 };
 const source1 = { e: 5, f: 6 };
 const source2 = { c: 3, d: 4 };
 
-// object.assign takes a target object, and other other objects, which are then assigned (cancatinated) to the target object, target is reassigned with the values of target, source1, source2
+// object.assign takes a target object,
+// and other other objects, which are then assigned (cancatinated) to the target object,
+// target is reassigned with the values of target, source1, source2
 // const assignedTarget = Object.assign(target, source1, source2);
 
 // console.log(target);
