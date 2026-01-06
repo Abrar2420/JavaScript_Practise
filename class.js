@@ -91,6 +91,32 @@ account.setBalance = 1500; // this will set the balance to 1500, by updating it.
 console.log(account.getBalance); // if we get the balance now it will out put 1500 instead
 account.setBalance = -555; // this will print the log in the if block of setBalance
 
+//& static method
+
+class Maths {
+  static add(num1, num2) {
+    return num1 + num2;
+  }
+  static subtract(num1, num2) {
+    return num1 - num2;
+  }
+  static multiply(num1, num2) {
+    return num1 * num2;
+  }
+  static divide(num1, num2) {
+    return num1 / num2;
+  }
+
+  // static methods cannot be called on instance
+  // i.e. const math = new Maths(); math.add(2, 3)
+}
+
+// can be called directly on class
+console.log(Maths.add(2, 3));
+console.log(Maths.subtract(10, 3));
+console.log(Maths.multiply(2, 3));
+console.log(Maths.divide(10, 2));
+
 /*
   ===========================================================
   JS CLASS CHEAT SHEET
