@@ -132,3 +132,6 @@ console.log(Maths.divide(10, 2));
   super()       | Passes data from child up to the parent.
   ===========================================================
 */
+
+console.log("hello" && "world");
+console.log(013);
