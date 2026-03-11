@@ -30,8 +30,3 @@ let newObj2 = { ...myObj2 }; //copied by reference
 
 newObj2.fName = "John";
 console.log(myObj2, newObj2);
-
-const abc = [15, 20, 35, 60, 30];
-
-let newAarr = abc.shift();
-console.log(newAarr);
