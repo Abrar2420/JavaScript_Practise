@@ -90,3 +90,10 @@ let count = 5;
 let newCount = count << 1;
 
 console.log(newCount);
+
+let aa = 3;
+let bb = 3;
+console.log(aa++);
+console.log(aa);
+console.log(++bb);
+console.log(bb);

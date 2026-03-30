@@ -56,13 +56,13 @@ console.log("Loops and Iterations");
 
 //? reverse the digits of a given number using while loop
 
-let num = 1234567;
-let reversed = 0;
+// let num = 1234567;
+// let reversed = 0;
 
-while (num > 0) {
-  let digit = num % 10;
-  reversed = reversed * 10 + digit;
-  num = Math.floor(num / 10);
-}
+// while (num > 0) {
+//   let digit = num % 10;
+//   reversed = reversed * 10 + digit;
+//   num = Math.floor(num / 10);
+// }
 
-console.log(reversed);
+// console.log(reversed);
