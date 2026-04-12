@@ -30,3 +30,7 @@ let newObj2 = { ...myObj2 }; //copied by reference
 
 newObj2.fName = "John";
 console.log(myObj2, newObj2);
+
+const a = console;
+a.log("hello from a");
+console.log("hello from console");
